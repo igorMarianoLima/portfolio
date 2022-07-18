@@ -1,0 +1,29 @@
+footer {
+  background-image: linear-gradient(
+    to right,
+    var(--veryDarkBlue),
+    var(--veryDarkPurple)
+  );
+
+  padding: 24px 0;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+
+footer li {
+  margin: 0 12px;
+}
+
+footer a {
+  color: #fff;
+  font-size: 20px;
+
+  transition-duration: 0.25s;
+}
+
+footer a:hover {
+  color: var(--lightGreen);
+}

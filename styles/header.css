@@ -1,0 +1,60 @@
+header {
+  z-index: 2;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  background-image: linear-gradient(
+    to right,
+    var(--darkBlueOpacity),
+    var(--darkPurpleOpacity)
+  );
+  backdrop-filter: blur(2px);
+
+  width: 100%;
+
+  padding: 16px 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+}
+
+header a {
+  position: relative;
+
+  color: #d1d1d1;
+  font-size: 16px;
+
+  margin-left: 32px;
+
+  transition-duration: 0.4s;
+}
+
+header a:hover {
+  color: #fff;
+}
+
+header a::after {
+  content: "";
+  height: 2px;
+  width: 0;
+
+  background-image: linear-gradient(to right, var(--lightGreen), #fff);
+
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+
+  transition-duration: 0.4s;
+}
+
+header a:hover::after {
+  width: 100%;
+}

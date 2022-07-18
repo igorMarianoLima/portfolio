@@ -1,0 +1,144 @@
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to right,
+    var(--darkBlue),
+    var(--darkPurple)
+  );
+}
+
+/* Declarando algumas classes */
+
+.titulo-section {
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+
+  margin-bottom: 12px;
+}
+
+.descricao-section {
+  text-align: justify;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  margin: 8px 0;
+}
+
+/* */
+
+section {
+  padding: 80px 0;
+}
+
+section#apresentacao .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+section#apresentacao .container > div:first-of-type {
+  flex: 1;
+  margin: 40px 0;
+}
+
+section#apresentacao h2,
+section#apresentacao h3 {
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+section#apresentacao #titulo {
+  font-size: 48px;
+}
+
+section#apresentacao #subtitulo {
+  font-size: 32px;
+}
+
+section#apresentacao .container > div:last-of-type {
+  margin-right: 8vw;
+}
+
+section#apresentacao img[alt="triangulo branco"] {
+  transition-duration: 0.4s;
+}
+
+section#apresentacao img[alt="triangulo branco"] {
+  filter: drop-shadow(12px 24px 4px var(--darkBlue));
+}
+
+section#apresentacao
+  .container
+  > div:last-of-type:hover
+  img[alt="triangulo branco"] {
+  transform: rotate(+12.5deg);
+}
+
+section#sobre {
+  background-color: #fff;
+}
+
+section#skills h2 {
+  color: #fff;
+}
+
+section#skills #skills-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+section#skills .progress-card {
+  display: flex;
+  flex-direction: column;
+
+  margin: 12px 0;
+
+  transition-duration: 0.4s;
+}
+
+section#skills .progress-card:hover {
+  transform: scale(1.125);
+}
+
+@keyframes PulseEffect {
+  0% {
+    stroke: var(--lightGreen);
+    stroke-width: 8px;
+  }
+
+  50% {
+    stroke: var(--darkGreen);
+    stroke-width: 6px;
+  }
+
+  100% {
+    stroke: var(--lightGreen);
+    stroke-width: 8px;
+  }
+}
+
+section#skills .progress-card svg circle {
+  animation: PulseEffect 2s infinite forwards;
+}
+
+section#skills .progress-card svg text {
+  cursor: default;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+section#skills .progress-card h3 {
+  color: #fff;
+  letter-spacing: 0.75px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+section#projetos {
+  background-color: #fff;
+}
