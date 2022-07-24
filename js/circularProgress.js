@@ -3,35 +3,35 @@ let skillsContainer = document.querySelector("#skills-container");
 const skills = [
   {
     technology: "HTML5",
-    image: "../images/svg/html.svg",
+    image: "./images/svg/html.svg",
   },
   {
     technology: "CSS3",
-    image: "../images/svg/css.svg",
+    image: "./images/svg/css.svg",
   },
   {
     technology: "JavaScript",
-    image: "../images/svg/js.svg",
+    image: "./images/svg/js.svg",
   },
   {
     technology: "TypeScript",
-    image: "../images/svg/typescript.svg",
+    image: "./images/svg/typescript.svg",
   },
   {
     technology: "ReactJS",
-    image: "../images/svg/react.svg",
+    image: "./images/svg/react.svg",
   },
   {
     technology: "React Native",
-    image: "../images/svg/react.svg",
+    image: "./images/svg/react.svg",
   },
   {
     technology: "SQL",
-    image: "../images/svg/sql.svg",
+    image: "./images/svg/sql.svg",
   },
   {
     technology: "UI/UX",
-    image: "../images/svg/ui_ux.svg",
+    image: "./images/svg/ui_ux.svg",
   },
 ];
 
