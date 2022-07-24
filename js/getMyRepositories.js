@@ -1,4 +1,5 @@
 const API_MY_REPOS = "https://api.github.com/users/igorMarianoLima/repos";
+let PROJECTS_CONTAINER = document.getElementById("projetos-container");
 let repositoriesContainer = document.querySelector(
   "#projetos-container .slide__content"
 );
@@ -21,13 +22,13 @@ const createRepositoryCard = (repository) => {
   return cardElement;
 };
 
-fetch(API_MY_REPOS).then(
-  (response) =>
-    response.status === 200 &&
-    response.json().then((repositories) => {
-      repositories.forEach((repository) => {
-        const card = createRepositoryCard(repository);
-        repositoriesContainer.appendChild(card);
-      });
-    })
+fetch(API_MY_REPOS).then((response) =>
+  response.status === 200
+    ? response.json().then((repositories) => {
+        repositories.forEach((repository) => {
+          const card = createRepositoryCard(repository);
+          repositoriesContainer.appendChild(card);
+        });
+      })
+    : PROJECTS_CONTAINER.remove()
 );

@@ -1,4 +1,5 @@
 const API_MY_PROFILE = "https://api.github.com/users/igorMarianoLima";
+const PROFILE_CONTAINER = document.getElementById("profile");
 
 const createProfile = (profileData) => {
   const avatar = document.createElement("div");
@@ -20,15 +21,14 @@ const createProfile = (profileData) => {
   return [avatar, profileName, profileBio, profileLocation];
 };
 
-fetch(API_MY_PROFILE).then(
-  (response) =>
-    response.status === 200 &&
-    response.json().then((data) => {
-      let profileContainer = document.getElementById("profile");
-      const profileElements = createProfile(data);
+fetch(API_MY_PROFILE).then((response) =>
+  response.status === 200
+    ? response.json().then((data) => {
+        const profileElements = createProfile(data);
 
-      profileElements.forEach((profileElement) => {
-        profileContainer.appendChild(profileElement);
-      });
-    })
+        profileElements.forEach((profileElement) => {
+          PROFILE_CONTAINER.appendChild(profileElement);
+        });
+      })
+    : PROFILE_CONTAINER.remove()
 );
