@@ -8,7 +8,7 @@ const createRepositoryCard = (repository) => {
   cardElement.className = "repository-card";
 
   const githubIcon = document.createElement("img");
-  githubIcon.src = "../images/svg/github.svg";
+  githubIcon.src = "./images/svg/github.svg";
   githubIcon.alt = "Ícone do GitHub";
 
   const cardTitle = document.createElement("a");
