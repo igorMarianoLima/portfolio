@@ -3,40 +3,42 @@ let skillsContainer = document.querySelector("#skills-container");
 const skills = [
   {
     technology: "HTML5",
-    percentage: 90,
+    image: "../images/svg/html.svg",
   },
   {
     technology: "CSS3",
-    percentage: 90,
+    image: "../images/svg/css.svg",
   },
   {
     technology: "JavaScript",
-    percentage: 70,
+    image: "../images/svg/js.svg",
+  },
+  {
+    technology: "TypeScript",
+    image: "../images/svg/typescript.svg",
   },
   {
     technology: "ReactJS",
-    percentage: 65,
+    image: "../images/svg/react.svg",
   },
   {
     technology: "React Native",
-    percentage: 45,
-  },
-  {
-    technology: "PHP",
-    percentage: 61,
+    image: "../images/svg/react.svg",
   },
   {
     technology: "SQL",
-    percentage: 32,
+    image: "../images/svg/sql.svg",
   },
   {
     technology: "UI/UX",
-    percentage: 40,
+    image: "../images/svg/ui_ux.svg",
   },
 ];
 
 const getProgressSvg = (percentage) => {
-  const setElementAttributes = (element, attributes) => {
+  const setElementAttributes = (element, properties) => {
+    let attributes = Object.entries(properties);
+
     attributes.forEach((attribute) => element.setAttribute(...attribute));
   };
 
@@ -47,10 +49,6 @@ const getProgressSvg = (percentage) => {
   const circleElement = document.createElementNS(
     "http://www.w3.org/2000/svg",
     "circle"
-  );
-  const textElement = document.createElementNS(
-    "http://www.w3.org/2000/svg",
-    "text"
   );
 
   const svgProperties = {
@@ -67,29 +65,15 @@ const getProgressSvg = (percentage) => {
     fill: "transparent",
   };
 
-  const textProperties = {
-    y: 124,
-    x: 80,
-    fill: "#fff",
-  };
-
-  let svgAttributes = Object.entries(svgProperties);
-  let circleAttributes = Object.entries(circleProperties);
-  let textAttributes = Object.entries(textProperties);
-
-  setElementAttributes(svgElement, svgAttributes);
-  setElementAttributes(circleElement, circleAttributes);
-  setElementAttributes(textElement, textAttributes);
-
-  textElement.innerHTML = `${percentage}%`;
+  setElementAttributes(svgElement, svgProperties);
+  setElementAttributes(circleElement, circleProperties);
 
   svgElement.appendChild(circleElement);
-  svgElement.appendChild(textElement);
 
   return svgElement;
 };
 
-const createProgressCard = (technology, percentage) => {
+const createProgressCard = (technology, percentage, image = null) => {
   const divContainer = document.createElement("div");
   divContainer.setAttribute("class", "progress-card");
 
@@ -99,10 +83,18 @@ const createProgressCard = (technology, percentage) => {
   divContainer.appendChild(svgPercentage);
   divContainer.innerHTML += cardTitle;
 
+  if (image) {
+    const imageCard = document.createElement("img");
+    imageCard.src = image;
+    imageCard.alt = `Logo ${technology}`;
+
+    divContainer.appendChild(imageCard);
+  }
+
   return divContainer;
 };
 
-skills.forEach(({ technology, percentage }) => {
-  const cardElement = createProgressCard(technology, percentage);
+skills.forEach(({ technology, percentage, image }) => {
+  const cardElement = createProgressCard(technology, percentage, image);
   skillsContainer.appendChild(cardElement);
 });
