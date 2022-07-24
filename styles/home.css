@@ -264,3 +264,22 @@ section#projetos #projetos_github-pages a {
 
   margin: 8px 0;
 }
+
+@media screen and (max-width: 1028px) {
+  section#apresentacao .container {
+    flex-direction: column-reverse;
+  }
+  section#apresentacao .container > div:last-of-type {
+    padding: 0;
+  }
+
+  section#apresentacao img[alt="triangulo branco"] {
+    width: min(220px, 40vw);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  section#projetos .flex-container {
+    flex-direction: column;
+  }
+}

@@ -46,3 +46,9 @@
 .slide__controls button:active {
   transform: scale(0.9);
 }
+
+@media screen and (max-width: 767px) {
+  .slide__container {
+    margin: 20px 0 !important;
+  }
+}
