@@ -215,7 +215,8 @@ section#projetos #projetos-container {
 }
 
 section#projetos .repository-card {
-  position: relative;
+  min-width: 220px;
+  max-width: 220px;
 
   display: flex;
   flex-direction: column;
