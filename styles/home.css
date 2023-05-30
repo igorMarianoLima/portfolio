@@ -244,26 +244,36 @@ section#projetos .repository-card a {
 
 section#projetos #projetos_github-pages {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 48px;
+}
+
+section#projetos .projeto__pagina {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #d7def7;
+  border-radius: 16px;
+
+  overflow: hidden;
 }
 
 section#projetos #projetos_github-pages iframe {
   width: 100%;
-  height: 40vh;
-
-  border-radius: 8px;
+  min-height: 60vh;
+  border-bottom: 1px solid #d7def7;
 }
 
 section#projetos #projetos_github-pages a {
-  display: block;
+  display: flex;
+  align-self: center;
 
   color: var(--darkBlue);
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 700;
   text-align: center;
 
-  margin: 8px 0;
+  margin: 24px 0;
 }
 
 @media screen and (max-width: 1028px) {
