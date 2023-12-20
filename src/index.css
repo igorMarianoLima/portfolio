@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
 
+:root {
+  --black-050: #474747;
+  --black-075: #333333;
+  --black-100: #2a2a2a;
+  --black-200: #1f1f1f;
+
+  --white-100: #FBFBFB;
+  --white-200: #CCCCCC;
+
+  --blue-100: #5CB3FF;
+  --blue-200: #33A0FF;
+  
+  --green-100: #5CFFE2;
+  --green-200: #33FFDA;
+
+  --purple-100: #6C5CFF;
+  --purple-500: #252432;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,12 +29,20 @@
   text-decoration: none;
   list-style: none;
 
+  color: var(--white-100);
+
   border: 0;
   outline: 0;
 }
 
 body {
-  background: linear-gradient(180deg, #2A2A2A 0%, #1E1E1E 100%);
+  background: linear-gradient(180deg, var(--black-100) 0%, #1E1E1E 100%);
   background-repeat: no-repeat;
   min-height: 100dvh;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 min(5%, 96px);
 }
