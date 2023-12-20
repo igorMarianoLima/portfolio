@@ -24,11 +24,12 @@ export const Footer = () => {
     return(
         <S.FooterWrapper>
             <S.FooterContainer>
-                <h1>Igor Mariano</h1>
+                <h1 className='h4'>Igor Mariano</h1>
 
                 <S.SocialLinks>
                     {socialLinks.map(link =>
                         <S.SocialLink
+                            className='p1sb'
                             key={link.redirectTo}
                             href={link.redirectTo}
                         >
