@@ -22,5 +22,4 @@ export const MenuLink = styled.a<{
     $isActive: boolean
 }>`
     color: ${props => props.$isActive ? 'var(--white-100)' : 'var(--white-200)'};
-    font-weight: 600;
 `;

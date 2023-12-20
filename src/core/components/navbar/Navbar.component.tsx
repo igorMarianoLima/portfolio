@@ -43,12 +43,13 @@ export const Navbar = () => {
     return(
         <S.Header>
             <S.Container>
-                <h1>Igor Mariano</h1>
+                <h1 className='h4'>Igor Mariano</h1>
                 
                 <S.Menu>
                     {navLinks.map(link => 
                         <S.MenuLink
                             key={link.redirectTo}
+                            className='p1sb'
                             $isActive={isLinkActive(link)}
                             href={link.redirectTo}
                         >
