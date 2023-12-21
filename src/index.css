@@ -52,21 +52,25 @@ body {
 */
 h1, .h1 {
   font-size: 48px;
+  font-weight: 700;
   line-height: 76.8px;
 }
 
 h4, .h4 {
   font-size: 32px;
+  font-weight: 700;
   line-height: 51.2px;
 }
 
 h5, .h5 {
   font-size: 24px;
+  font-weight: 700;
   line-height: 38.4px;
 }
 
 h6, .h6 {
   font-size: 20px;
+  font-weight: 700;
   line-height: 32px;
 }
 
@@ -77,4 +81,11 @@ p, .p1, .p1sb {
 
 .p1sb {
   font-weight: 600;
+}
+
+/* */
+
+
+img {
+  max-width: 100%;
 }
