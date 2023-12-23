@@ -35,6 +35,10 @@ export const Navbar = () => {
             redirectTo: '#projetos'
         },
         {
+            label: 'Habilidades',
+            redirectTo: '#habilidades'
+        },
+        {
             label: 'Contato',
             redirectTo: '#contato'
         }
