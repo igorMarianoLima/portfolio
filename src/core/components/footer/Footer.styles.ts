@@ -12,6 +12,11 @@ export const FooterContainer = styled.div.attrs({
 })`
     display: flex;
     justify-content: space-between;
+    gap: 24px 48px;
+
+    @media screen and (max-width: 1024px){
+        flex-direction: column;
+    }
 `
 
 export const SocialLinks = styled.menu`
