@@ -34,7 +34,7 @@ export const ImageContainer = styled.div`
 
     @media screen and (max-width: 1280px) {
         max-width: unset;
-        aspect-ratio: none;
+        aspect-ratio: unset;
 
         flex-direction: column;
         gap: 32px;
