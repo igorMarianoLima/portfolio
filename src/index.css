@@ -33,6 +33,16 @@
 
   border: 0;
   outline: 0;
+
+  &::selection {
+    background: var(--blue-200);
+    color: var(--white-100);
+    -webkit-text-fill-color: var(--white-100);
+  }
+}
+
+html,body {
+  scroll-behavior: smooth;
 }
 
 body {
