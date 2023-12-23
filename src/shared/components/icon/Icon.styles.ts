@@ -12,5 +12,5 @@ export const Container = styled.div<ContainerProps>`
     justify-content: center;
 
     aspect-ratio: 1/1;
-    width: ${props => props.size};
+    width: ${props => props.size}px;
 `;
