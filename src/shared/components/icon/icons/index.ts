@@ -1,4 +1,5 @@
 import { Angular } from './Angular.icon';
+import { Figma } from './Figma.icon';
 import { GitHub } from './GitHub.icon';
 import { GitLab } from './GitLab.icon';
 import { LinkedIn } from './LinkedIn.icon';
@@ -15,7 +16,8 @@ export const icons = {
     'react': React,
     'nest': Nest,
     'reactNative': ReactNative,
-    'sql': Sql
+    'sql': Sql,
+    'figma': Figma
 }
 
 export type IconName = keyof typeof icons;
