@@ -1,10 +1,10 @@
-import { Icon } from '../../../shared/components/icon/Icon.component';
-import { SocialLink } from './Footer.interface';
+import { SocialLink } from '../../../shared/components/socialLink/SocialLink.component';
+import { SocialLinkProps } from '../../../shared/components/socialLink/SocialLink.interface';
 
 import * as S from './Footer.styles';
 
 export const Footer = () => {
-    const socialLinks: SocialLink[] = [
+    const socialLinks: SocialLinkProps[] = [
         {
             icon: 'linkedIn',
             label: 'LinkedIn',
@@ -28,15 +28,7 @@ export const Footer = () => {
                 <h1 className='h4'>Igor Mariano</h1>
 
                 <S.SocialLinks>
-                    {socialLinks.map(link =>
-                        <S.SocialLink
-                            className='p1sb'
-                            key={link.redirectTo}
-                            href={link.redirectTo}
-                        >
-                            <Icon name={link.icon} size={24} /> {link.label}
-                        </S.SocialLink>
-                    )}
+                    {socialLinks.map(link => <SocialLink key={link.label} {...link} />)}
                 </S.SocialLinks>
             </S.FooterContainer>
         </S.FooterWrapper>
