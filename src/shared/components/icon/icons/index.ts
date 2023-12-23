@@ -2,6 +2,7 @@ import { Angular } from './Angular.icon';
 import { GitHub } from './GitHub.icon';
 import { GitLab } from './GitLab.icon';
 import { LinkedIn } from './LinkedIn.icon';
+import { Nest } from './Nest.icon';
 import { React } from './React.icon';
 
 export const icons = {
@@ -9,7 +10,8 @@ export const icons = {
     'linkedIn': LinkedIn,
     'gitLab': GitLab,
     'gitHub': GitHub,
-    'react': React
+    'react': React,
+    'nest': Nest
 }
 
 export type IconName = keyof typeof icons;
