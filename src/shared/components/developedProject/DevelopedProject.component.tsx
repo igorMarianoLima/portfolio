@@ -11,6 +11,7 @@ export const DevelopedProject = ({
     deployLink
 }: DevelopedProjectProps) => {
     const redirectTo = (link: string) => {
+        if (!link) return alert('Desculpe, este repositório não está disponível ou público no momento...');
         window.open(link, '_blank');
     }
 
