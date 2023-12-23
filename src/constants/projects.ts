@@ -1,8 +1,8 @@
 import { DevelopedProjectProps } from "../shared/components/developedProject/DevelopedProject.interface";
 
-import TccFitLifeMockup from '../../assets/images/projects/tcc-fitlife.png';
-import DashboardEfrontMockup from '../../assets/images/projects/dashboard-efront.png';
-import EcommerceSneakersMockup from '../../assets/images/projects/ecommerce-sneakers.png';
+import TccFitLifeMockup from '../assets/images/projects/tcc-fitlife.png';
+import DashboardEfrontMockup from '../assets/images/projects/dashboard-efront.png';
+import EcommerceSneakersMockup from '../assets/images/projects/ecommerce-sneakers.png';
 
 export const PROJECTS: Omit<DevelopedProjectProps, 'side'>[] = [
     {
