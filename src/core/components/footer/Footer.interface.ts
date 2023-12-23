@@ -1,5 +1,7 @@
+import { IconName } from "../../../shared/components/icon/icons";
+
 export interface SocialLink {
-    icon: string;
+    icon: IconName;
     label: string;
     redirectTo: string;
 }

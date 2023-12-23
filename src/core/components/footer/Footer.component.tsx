@@ -1,3 +1,4 @@
+import { Icon } from '../../../shared/components/icon/Icon.component';
 import { SocialLink } from './Footer.interface';
 
 import * as S from './Footer.styles';
@@ -5,17 +6,17 @@ import * as S from './Footer.styles';
 export const Footer = () => {
     const socialLinks: SocialLink[] = [
         {
-            icon: '',
+            icon: 'linkedIn',
             label: 'LinkedIn',
             redirectTo: 'https://www.linkedin.com/in/igor-mariano-lima/'
         },
         {
-            icon: '',
+            icon: 'gitLab',
             label: 'GitLab',
             redirectTo: 'https://gitlab.com/igorMarianoLima/'
         },
         {
-            icon: '',
+            icon: 'gitHub',
             label: 'GitHub',
             redirectTo: 'https://github.com/igorMarianoLima/'
         }
@@ -33,7 +34,7 @@ export const Footer = () => {
                             key={link.redirectTo}
                             href={link.redirectTo}
                         >
-                            {link.label}
+                            <Icon name={link.icon} size={24} /> {link.label}
                         </S.SocialLink>
                     )}
                 </S.SocialLinks>
