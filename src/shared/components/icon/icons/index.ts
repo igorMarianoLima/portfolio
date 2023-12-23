@@ -9,6 +9,7 @@ import { Nest } from './Nest.icon';
 import { React } from './React.icon';
 import { ReactNative } from './ReactNative.icon';
 import { Sql } from './Sql.icon';
+import { TypeScript } from './TypeScript.icon';
 
 export const icons = {
     'angular': Angular,
@@ -21,7 +22,8 @@ export const icons = {
     'sql': Sql,
     'figma': Figma,
     'html': Html,
-    'css': Css
+    'css': Css,
+    'typeScript': TypeScript
 }
 
 export type IconName = keyof typeof icons;
